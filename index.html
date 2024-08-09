@@ -218,23 +218,20 @@
         var x = document.getElementById("cardGame");
         if (x.style.display === "none") {
           blankAll();
-          x.style.display = "flex";
+          document.getElementById('cardGame').innerHTML = /*HTML*/`
+            <div id="head" class="bodypart"></div>
+            <div id="body" class="bodypart"></div>
+            <div id="legs" class="bodypart"></div>
+          `;
+          selectHead1();
+          selectBody1();
+          selectLegs1();
+          x.style.display = "flex"
         } else {
           blankAll();
         }
       }
 
-      function showBodyGame() {
-        blankAll();
-        document.getElementById('cardGame').innerHTML = /*HTML*/`
-          <div id="head" class="bodypart"></div>
-          <div id="body" class="bodypart"></div>
-          <div id="legs" class="bodypart"></div>
-        `;
-        selectHead1();
-        selectBody1();
-        selectLegs1();
-      }
 
       function blankAll() {
         document.getElementById("cardTools").style.display = "none";
