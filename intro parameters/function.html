@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainDiv">Text Text Text</div>
+    <button onclick="changeColorTextAndSize('green',50,100,'This is text 1')">
+        <img src="raccoon_sleeping.jpg" alt="clickable img" style="width: 150px; height: 150px;"> <br>
+        Raccoon
+    </button>
+    <button onclick="changeColorTextAndSize('purple',75,200,'This is text 2')">Text 2</button>
+    <div id="secondDiv">Div 2</div>
+
+    <script>
+        function changeColorTextAndSize(color,width,height,text) {
+            document.getElementById('secondDiv').innerHTML = /*html*/`
+                <div style="background-color: ${color}; width: ${width}%; height: ${height}px;">
+                    ${text}
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
