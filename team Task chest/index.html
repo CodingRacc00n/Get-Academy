@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    hello
+    <div id="chest">
+        <div class="openChest" onclick="ToggleChest()">
+            <img id="chestImage" src="/team Task chest/img/money.png" style="height: 50px; width: 50px;">
+        </div>
+        <div>
+            <div class="innerChest" id="chestContent" style="display: none;">
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>     
+        </div>
+    </div>
+
+
+    <script>
+        function ToggleChest(){
+            var chestContent = document.getElementById("chestContent");
+            var chestImage = document.getElementById("chestImage");
+
+            if (chestContent.style.display === "none") {
+                chestContent.style.display = "block";
+                chestImage.src = "/team Task chest/img/money.png";
+            } else {
+                chestContent.display
+            }
+        }
+
+    </script>
+</body>
+</html>

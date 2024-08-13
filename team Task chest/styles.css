@@ -1,0 +1,6 @@
+.chest {
+    width: 500px;
+    background-color: rgb(170, 68, 68);
+    border: 1px solid darkgrey;
+    margin: 10px;
+}
