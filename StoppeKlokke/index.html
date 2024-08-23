@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="startTimer()">Start Timer</button>
+    <button onclick="pauseTimer()">Pause</button>
+    <button onclick="stopAll()">Stop & Remove</button>
+
+    <div id="app"></div> RundeTider: <div id="lastRound"></div> <br>
+
+   
+    <script>
+        const app = document.getElementById('app');
+        const roundTime = document.getElementById('lastRound');
+        let seconds = 0;
+        var timer;
+
+
+        function startTimer(){
+            setInterval(countSeconds, 1000)
+        }
+
+
+        function countSeconds(){
+            app.innerHTML = seconds;
+            seconds++;
+        }
+
+        function pauseTimer(){
+            roundTime.innerHTML += `<li>${seconds-1} seconds </li>`;
+            clearInterval(timer);
+            seconds = 0;
+        }
+
+        function stopAll(){
+            location.reload()
+        }
+    </script>
+</body>
+</html>

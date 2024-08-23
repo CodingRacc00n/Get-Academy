@@ -4,11 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .myStyle {
+            background-color: lightgreen;
+            padding: 16px;
+            border: 1px solid;
+            height: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div></div>
-    <div></div>
-    <div></div>
+    <div onclick="selectColor('green')" style="border: 1px solid;background-color: green;">Green</div>
+    <div onclick="selectColor('purple')" style="border: 1px solid; background-color:  purple;">Purple</div>
+    <div onclick="selectColor('red')" style="border: 1px solid; background-color:  red;">Red</div>
+    <button onclick="changeBackgroundColor()">Click me</button>
+
+    <div id="myDiv"></div>
+    <div id="myDiv"></div>
+    <button onclick="addDivSTyle()">Add</button>
+    <button onclick="removeDivStyle()">Remove</button>
+    <button onclick="toggleDivStyle()">Toggle</button>
+
     
+    <script>
+        let selectedColor;
+        function selectColor(color){
+             selectedColor = color
+             console.log(selectedColor)
+        }
+
+        function changeBackgroundColor(){
+            document.body.style.backgroundColor = selectedColor
+        }
+        
+        function addDivSTyle(){
+            const list =
+            document.getElementById("myDiv").classList;
+            list.add("myStyle");
+        }
+
+        function removeDivStyle(){
+            const list = 
+            document.getElementById("myDiv").classList;
+            list.remove("myStyle")
+        }
+
+        function toggleDivStyle(){
+            document.getElementById("myDiv").classList.toggle("myStyle");
+        }
+    </script>
+
 </body>
 </html>

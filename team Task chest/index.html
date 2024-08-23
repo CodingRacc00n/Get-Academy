@@ -8,8 +8,8 @@
 <body>
     hello
     <div id="chest">
-        <div class="openChest" onclick="ToggleChest()">
-            <img id="chestImage" src="/team Task chest/img/money.png" style="height: 50px; width: 50px;">
+        <div class="openChest" onclick="ToggleChest();">
+            <img id="chestImage" src="/team Task chest/img/closedChest.png" style="height: 50px; width: 50px;">
         </div>
         <div>
             <div class="innerChest" id="chestContent" style="display: none;">
@@ -28,9 +28,10 @@
 
             if (chestContent.style.display === "none") {
                 chestContent.style.display = "block";
-                chestImage.src = "/team Task chest/img/money.png";
+                chestImage.src = "/team Task chest/img/openChest.png";
             } else {
-                chestContent.display
+                chestContent.style.display = "none";
+                chestImage.src = "/team Task chest/img/closedChest.png";
             }
         }
 
