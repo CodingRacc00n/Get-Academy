@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      #keyboard {
+        display: flex;
+        padding: 10px;
+      }
+
+    </style>
+</head>
+<body>
+    <input id="display" type="text" placeholder="write here" readonly>
+    <div id="keyboard">
+      <div onclick="inputLetter(this)">A</div>
+      <div onclick="inputLetter(this)">B</div>
+      <div onclick="inputLetter(this)">C</div>
+      <div onclick="inputLetter(this)">D</div>
+      <div onclick="inputLetter(this)">E</div>
+      <div onclick="inputLetter(this)">F</div>
+      <div onclick="inputLetter(this)">G</div>
+      <div onclick="inputLetter(this)">H</div>
+      <div onclick="inputLetter(this)">I</div>
+      <div onclick="inputLetter(this)">J</div>
+      <div onclick="inputLetter(this)">K</div>
+      <div onclick="inputLetter(this)">L</div>
+      <div onclick="inputLetter(this)">M</div>
+      <div onclick="inputLetter(this)">N</div>
+      <div onclick="inputLetter(this)">O</div>
+      <div onclick="inputLetter(this)">P</div>
+      <div onclick="inputLetter(this)">Q</div>
+      <div onclick="inputLetter(this)">R</div>
+      <div onclick="inputLetter(this)">S</div>
+      <div onclick="inputLetter(this)">T</div>
+      <div onclick="inputLetter(this)">U</div>
+      <div onclick="inputLetter(this)">V</div>
+      <div onclick="inputLetter(this)">W</div>
+      <div onclick="inputLetter(this)">X</div>
+      <div onclick="inputLetter(this)">Y</div>
+      <div onclick="inputLetter(this)">Z</div>
+      <div onclick="inputLetter(this)">SPACEBAR</div>
+      <div onclick="inputLetter(this)">BACKSPACE</div>
+  </div>
+    
+
+    <script>
+      function inputLetter(element){
+        if(element.innerText == 'SPACEBAR') {
+          document.getElementById('display').value += ' ';
+        }else if(element.innerText == 'BACKSPACE'){
+          document.getElementById('display').value = document.getElementById('display').value.slice(0, -1);
+        }else{
+          document.getElementById('display').value += element.innerText;
+        }
+      }
+    </script>
+    
+</body>
+</html>

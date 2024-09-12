@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        let hunger = 100;
+        let count =5;
+
+        function updateView(){
+            document.getElementById('app').innerHTML = /*HTML*/`
+                ${barsCheck()}
+            `;
+        }
+        let intervalID = setInterval(checkForBars, 1000)
+
+        function checkForBars(){
+            hunger -= 5
+            if(hunger < 80){
+                count = 4;
+            }
+            if(hunger < 60){
+                count = 3;
+            }
+            if(hunger < 40){
+                count = 2;
+            }
+            if(hunger < 20){
+                count = 1;
+            }
+            if(hunegr == 0){
+                count =0;
+                clearInterval(intervalID)
+            }
+            console.log(hunger)
+            updateView();
+        }
+
+        function barsCheck(){
+            let html = '';
+            for(i=0; i < count; i++){
+                html += `<div>Bar</div>`
+            }
+            return html;
+        }
+    </script>
+</body>
+</html>

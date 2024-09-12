@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .Seg{
+        height: 20px;
+        width: 30px;
+        border: 1px solid;
+        display: flex;
+    }
+    
+
+    .NeedsBar{
+        display: flex;
+        flex-direction: row;
+    }
+    </style>
+</head>
+<body>
+    <div id="app"> 
+       
+    </div>
+
+    <script>
+        function show(count){
+                document.getElementById('app').innerHTML = /*HTML*/`
+                    <div class="NeedsBar"> Hunger:
+                        ${createSeg(1, count)}
+                        ${createSeg(2, count)}
+                        ${createSeg(3, count)}
+                        ${createSeg(4, count)}
+                        ${createSeg(5, count)}
+                        
+                    </div>
+                `;
+            }
+
+        function createSeg(pos, count){
+            
+            return /*HTML*/`
+                <div class="Seg" style="background-color: green;">
+                </div>
+            `;
+        }
+        
+        show(4);
+
+        // let hunger = 100;
+        // let count =5;
+
+        // function updateView(){
+        //     document.getElementById('app').innerHTML = /*HTML*/`
+        //        <div class = "NeedsBar"> ${barsCheck()}</div>
+        //     `;
+        // }
+        // let intervalID = setInterval(checkForBars, 5000)
+
+        // function checkForBars(){
+        //     hunger -= 5
+        //     if(hunger < 80){
+        //         count = 4;
+        //     }
+        //     if(hunger < 60){
+        //         count = 3;
+        //     }
+        //     if(hunger < 40){
+        //         count = 2;
+        //     }
+        //     if(hunger < 20){
+        //         count = 1;
+        //     }
+        //     if(hunger == 0){
+        //         count =0;
+        //         clearInterval(intervalID)
+        //     }
+        //     console.log(hunger)
+        //     updateView();
+        // }
+
+        // function barsCheck(){
+        //     let html = '';
+        //     for(i=0; i < count; i++){
+        //         html += `<div class ="Seg" style="background-color: green;">Bar</div>`
+        //     }
+        //     return html;
+        // }
+    </script>
+</body>
+</html>
